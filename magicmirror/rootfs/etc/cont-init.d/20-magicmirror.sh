@@ -26,6 +26,21 @@ if ! hass.directory_exists '/config/magicmirror/css'; then
     rm -R /opt/css
 fi
 
+# Install additional modules
+
+if hass.config.has_value 'custom_modules'; then
+    for module in $(hass.config.get 'custom_modules'); do
+        name=$(echo "$module" | awk -F'/' ' { print $NF }')
+        if ! hass.directory_exists '/data/modules/$name'; then
+            hass.log.info "Installing custom module: ${name}"
+            mkdir /data/modules/"$name"
+            git clone $module".git" /data/modules/"$name"
+            cd /data/modules/"$name"
+            npm install --unsafe-perm --silent
+        fi
+    done
+fi
+
 # Symlink configfile
 ln -sf /config/magicmirror/config.js /opt/config/config.js
 ln -sf /data/modules /opt/modules

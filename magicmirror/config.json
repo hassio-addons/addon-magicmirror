@@ -14,7 +14,7 @@
   ],
   "boot": "auto",
   "hassio_api": true,
-  "homeassistant_api": false,
+  "homeassistant_api": true,
   "host_network": false,
   "ports": {
     "1778/tcp": 1778
@@ -30,7 +30,10 @@
     "ssl": true,
     "certfile": "fullchain.pem",
     "keyfile": "privkey.pem",
-    "ipv6": false
+    "ipv6": false,
+    "custom_modules": [
+      
+      ]
   },
   "schema": {
     "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)",
@@ -40,6 +43,7 @@
     "certfile": "str",
     "keyfile": "str",
     "ipv6": "bool",
+    "custom_modules": ["str"],
     "i_like_to_be_pwned": "bool?",
     "leave_front_door_open": "bool?"
   },
