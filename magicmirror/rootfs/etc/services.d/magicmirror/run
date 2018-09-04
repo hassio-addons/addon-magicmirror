@@ -1,0 +1,11 @@
+#!/usr/bin/with-contenv bash
+# ==============================================================================
+# Community Hass.io Add-ons: MagicMirror²
+# Runs MagicMirror²
+# ==============================================================================
+# shellcheck disable=SC1091
+source /usr/lib/hassio-addons/base.sh
+
+hass.log.info "Starting MagicMirror² server..."
+cd /opt || hass.die "Could not change dir."
+exec node serveronly
