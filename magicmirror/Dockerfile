@@ -19,7 +19,7 @@ RUN \
     apache2-utils=2.4.35-r0 \
     nginx=1.14.0-r1 \
   && apk add --no-cache --virtual .build-dependencies \
-    git=2.18.0-r0 \
+    git=2.18.1-r0 \
   && cd /opt \
   && git clone https://github.com/MichMich/MagicMirror.git /opt \
   && npm install --unsafe-perm \
