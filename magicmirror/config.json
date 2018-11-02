@@ -18,6 +18,7 @@
   "host_network": false,
   "ports": {
     "1778/tcp": 1778
+    "1337/tcp": 1337
   },
   "map": [
     "ssl",
