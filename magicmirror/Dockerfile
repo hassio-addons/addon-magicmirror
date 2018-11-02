@@ -18,6 +18,8 @@ RUN \
     npm=8.11.4-r0 \
     apache2-utils=2.4.35-r0 \
     nginx=1.14.0-r1 \
+    lua-resty-http=0.12-r1 \
+    nginx-mod-http-lua=1.14.0-r1 \
   && apk add --no-cache --virtual .build-dependencies \
     git=2.18.1-r0 \
   && cd /opt \

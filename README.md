@@ -35,6 +35,7 @@ comparison to installing any other Hass.io add-on.
 1. Start the "MagicMirror²" add-on
 1. Check the logs of the "MagicMirror²" add-on to see if everything went well.
 1. Click "OPEN WEB UI" to open the MagicMirror² website.
+1. Log in with your Home Assistant user.
 
 **NOTE**: Starting the add-on might take a couple of minutes (especially the
 first time starting the add-on).
@@ -61,8 +62,6 @@ Example add-on configuration:
 ```json
 {
   "log_level": "info",
-  "username": "MarryPoppins",
-  "password": "Supercalifragilisticexpialidocious",
   "ssl": true,
   "certfile": "fullchain.pem",
   "keyfile": "privkey.pem",
@@ -89,25 +88,6 @@ Please note that each level automatically includes log messages from a
 more severe level, e.g., `debug` also shows `info` messages. By default,
 the `log_level` is set to `info`, which is the recommended setting unless
 you are troubleshooting.
-
-### Option: `username`
-
-Username for authenticating with the MagicMirror² interface. Leaving the username
-field empty, will disable the authentication mechanism entirely.
-
-Setting a username/password can be added as an extra line of defense,
-to prevent users of using your installation for themselves.
-
-This option is HIGHLY recommended in case you expose this add-on to the outside
-world.
-
-**Note**: _This option support secrets, e.g., `!secret magicmirror_username`._
-
-### Option: `password`
-
-Password for authenticating with MagicMirror² interface.
-
-**Note**: _This option support secrets, e.g., `!secret magicmirror_password`._
 
 ### Option: `ssl`
 
