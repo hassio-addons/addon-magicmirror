@@ -14,7 +14,7 @@ WORKDIR /opt
 # Setup base
 RUN \
   apk add --no-cache \
-    nodejs=8.11.4-r0 \
+    nodejs=8.14.0-r0 \
     npm=8.11.4-r0 \
     apache2-utils=2.4.35-r0 \
     nginx=1.14.0-r1 \
