@@ -65,7 +65,11 @@ Example add-on configuration:
   "ssl": true,
   "certfile": "fullchain.pem",
   "keyfile": "privkey.pem",
-  "ipv6": false
+  "ipv6": false,
+  "modules":
+    [
+      "mihairinzis/MMM-wiki"
+    ]
 }
 ```
 
@@ -109,6 +113,20 @@ The private key file to use for SSL.
 ### Option: `ipv6`
 
 Set this option too `false` to disable IPv6 support.
+
+### Option: `modules`
+
+A list of modules you would like to use.
+The modules needs to be hosted in a github repo.
+
+For `https://github.com/mihairinzis/MMM-wiki` you use:
+
+```json
+  "modules":
+    [
+      "mihairinzis/MMM-wiki"
+    ]
+```
 
 ### Option: `i_like_to_be_pwned`
 
