@@ -3,7 +3,8 @@ ARG BUILD_FROM=hassioaddons/base:3.0.1
 FROM ${BUILD_FROM}
 
 # Set ENV
-ENV MM_VERSION = "v2.6.0"
+ENV MM_VERSION="v2.6.0" \
+    MMM_HASS='7d0063b0bdfffc9b8d4c751fb31dc0ea0f4e39e4'
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -19,12 +20,18 @@ RUN \
     nginx=1.14.2-r0 \
     lua-resty-http=0.12-r1 \
     nginx-mod-http-lua=1.14.2-r0 \
-  && apk add --no-cache --virtual .build-dependencies \
     git=2.20.1-r0 \
+    jq \
   && cd /opt \
-  && git clone https://github.com/MichMich/MagicMirror.git /opt \
+  && git clone --branch "${MM_VERSION}" --depth=1 \
+    https://github.com/MichMich/MagicMirror.git /opt \
   && npm install --unsafe-perm \
-  && apk del --purge .build-dependencies
+  \
+  && git clone https://github.com/aserramonner/MMM-HASS.git /tmp/MMM_HASS \
+  && cd /tmp/MMM_HASS \
+  && git checkout "${MMM_HASS}" \
+  && mv /tmp/MMM_HASS /opt/modules/ \
+  && npm install --unsafe-perm
 
 # Copy root filesystem
 COPY rootfs /
