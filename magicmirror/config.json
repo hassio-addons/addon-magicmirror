@@ -30,7 +30,11 @@
     "ssl": true,
     "certfile": "fullchain.pem",
     "keyfile": "privkey.pem",
-    "ipv6": false
+    "ipv6": false,
+    "modules": 
+      [
+        "mihairinzis/MMM-wiki"
+      ]
   },
   "schema": {
     "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)",
@@ -38,6 +42,7 @@
     "certfile": "str",
     "keyfile": "str",
     "ipv6": "bool",
+    "modules": ["str"],
     "i_like_to_be_pwned": "bool?",
     "leave_front_door_open": "bool?"
   },
