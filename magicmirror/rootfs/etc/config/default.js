@@ -12,8 +12,12 @@ var config = {
       module: "helloworld",
       position: "top_left",
       config: {
-        text: "MMM-HASS"
+        text: "Data from Home Assistant:"
       }
+    },
+    {
+      module: "clock",
+      position: "top_right"
     },
     {
       module: "MMM-HASS",
@@ -24,29 +28,26 @@ var config = {
         hassiotoken: true,
         devices: [
           { 
-            deviceLabel: "Kaffetrakter",
+            deviceLabel: "Front door",
             deviceReadings: [
             {
-              sensor: "script.1550882211073",
-              icon: "fa fa-coffee"
+              sensor: "binary_sensor.front_door"
             }
             ]
           },
           { 
-            deviceLabel: "Kaffetrakter",
+            deviceLabel: "Speedtest",
             deviceReadings: [
             {
-              sensor: "script.1550882211073",
-              icon: "fa fa-coffee"
+              sensor: "sensor.speedtest_download"
             }
             ]
           },
           { 
-            deviceLabel: "Kaffetrakter",
+            deviceLabel: "Published Hass.io version",
             deviceReadings: [
             {
-              sensor: "script.1550882211073",
-              icon: "fa fa-coffee"
+              sensor: "sensor.published_hass_io_version"
             }
             ]
           }
@@ -57,7 +58,14 @@ var config = {
       module: "helloworld",
       position: "middle_center",
       config: {
-      text: "MM2 Demo"
+      text: "WELCOME"
+      }
+    },
+    {
+      module: "helloworld",
+      position: "middle_center",
+      config: {
+      text: "MagicMirror² - Community Hass.io Add-on"
       }
     }
   ]

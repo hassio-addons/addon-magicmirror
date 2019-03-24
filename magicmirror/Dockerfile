@@ -30,7 +30,7 @@ RUN \
   && git clone https://github.com/aserramonner/MMM-HASS.git /tmp/MMM_HASS \
   && cd /tmp/MMM_HASS \
   && git checkout "${MMM_HASS}" \
-  && mv /tmp/MMM_HASS /opt/modules/ \
+  && mv /tmp/MMM_HASS /opt/modules/MMM-HASS \
   && npm install --unsafe-perm
 
 # Copy root filesystem
