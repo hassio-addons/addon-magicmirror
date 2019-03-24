@@ -15,7 +15,7 @@ WORKDIR /opt
 RUN \
   apk add --no-cache \
     nodejs=8.14.0-r0 \
-    npm=8.14.0-r0 \
+    npm=10.14.2-r0 \
     apache2-utils=2.4.38-r3 \
     nginx=1.14.2-r0 \
     lua-resty-http=0.12-r1 \
