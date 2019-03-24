@@ -21,7 +21,6 @@ RUN \
     lua-resty-http=0.12-r1 \
     nginx-mod-http-lua=1.14.2-r0 \
     git=2.20.1-r0 \
-    jq \
   && cd /opt \
   && git clone --branch "${MM_VERSION}" --depth=1 \
     https://github.com/MichMich/MagicMirror.git /opt \
