@@ -14,14 +14,13 @@ WORKDIR /opt
 # Setup base
 RUN \
   apk add --no-cache \
-    nodejs=8.14.0-r0 \
-    npm=8.14.0-r0 \
-    apache2-utils=2.4.38-r3 \
+    nodejs=10.14.2-r0 \
+    npm=10.14.2-r0 \
     nginx=1.14.2-r0 \
     lua-resty-http=0.12-r1 \
     nginx-mod-http-lua=1.14.2-r0 \
   && apk add --no-cache --virtual .build-dependencies \
-    git=2.18.1-r0 \
+    git=2.20.1-r0 \
   && cd /opt \
   && git clone https://github.com/MichMich/MagicMirror.git /opt \
   && npm install --unsafe-perm \
