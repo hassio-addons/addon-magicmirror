@@ -13,6 +13,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 WORKDIR /opt
 
 # Setup base
+# hadolint ignore=DL3003
 RUN \
   apk add --no-cache \
     nodejs=10.14.2-r0 \
