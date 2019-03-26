@@ -159,7 +159,7 @@ panel_iframe:
   magicmirror:
     title: MagicMirror²
     icon: mdi:code-brackets
-    url: http://addres.to.your.hass.io:1337
+    url: http://addres.to.your.hass.io:6556
 ```
 
 ## Changelog & Releases

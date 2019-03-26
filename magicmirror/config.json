@@ -4,7 +4,7 @@
   "slug": "magicmirror",
   "description": "MagicMirror² is an open source modular smart mirror platform.",
   "url": "https://github.com/hassio-addons/addon-magicmirror/tree/master/README.md",
-  "webui": "[PROTO:ssl]://[HOST]:[PORT:1337]",
+  "webui": "[PROTO:ssl]://[HOST]:[PORT:6556]",
   "startup": "services",
   "arch": [
     "aarch64",
@@ -19,7 +19,7 @@
   "homeassistant_api": true,
   "host_network": false,
   "ports": {
-    "1337/tcp": 1337
+    "6556/tcp": 6556
   },
   "map": [
     "ssl",
