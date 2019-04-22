@@ -21,6 +21,9 @@
   "ports": {
     "6556/tcp": 6556
   },
+  "ports_description": {
+    "6556/tcp": "Magic Mirror frontend"
+  },
   "map": [
     "ssl",
     "config:rw"
