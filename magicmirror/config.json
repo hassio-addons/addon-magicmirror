@@ -18,7 +18,6 @@
   "auth_api": true,
   "hassio_role": "default",
   "homeassistant_api": true,
-  "host_network": false,
   "ports": {
     "6556/tcp": 6556
   },
