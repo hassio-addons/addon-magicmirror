@@ -106,10 +106,6 @@ The private key file to use for SSL.
 
 **Note**: _The file MUST be stored in `/ssl/`, which is the default for Hass.io_
 
-### Option: `ipv6`
-
-Set this option too `false` to disable IPv6 support.
-
 ### Option: `modules`
 
 A list of modules you would like to use.
