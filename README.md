@@ -4,6 +4,12 @@
 ![Project Stage][project-stage-shield]
 [![License][license-shield]](LICENSE.md)
 
+![Supports armhf Architecture][armhf-shield]
+![Supports armv7 Architecture][armv7-shield]
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
+![Supports i386 Architecture][i386-shield]
+
 [![GitLab CI][gitlabci-shield]][gitlabci]
 ![Project Maintenance][maintenance-shield]
 [![GitHub Activity][commits-shield]][commits]
@@ -42,17 +48,6 @@ first time starting the add-on).
 
 **NOTE**: Do not add this repository to Hass.io, please use:
 `https://github.com/hassio-addons/repository`.
-
-## Docker status
-
-![Supports armhf Architecture][armhf-shield]
-![Supports armv7 Architecture][armv7-shield]
-![Supports aarch64 Architecture][aarch64-shield]
-![Supports amd64 Architecture][amd64-shield]
-![Supports i386 Architecture][i386-shield]
-
-[![Docker Layers][layers-shield]][microbadger]
-[![Docker Pulls][pulls-shield]][dockerhub]
 
 ## Configuration
 
@@ -259,19 +254,16 @@ SOFTWARE.
 [dockerhub]: https://hub.docker.com/r/hassioaddons/magicmirror
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
 [forum]: https://community.home-assistant.io/
-[ludeeus]: https://github.com/ludeeus
 [gitlabci-shield]: https://gitlab.com/hassio-addons/addon-magicmirror/badges/master/pipeline.svg
 [gitlabci]: https://gitlab.com/hassio-addons/addon-magicmirror/pipelines
 [home-assistant]: https://home-assistant.io
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
 [issue]: https://github.com/hassio-addons/addon-magicmirror/issues
 [keepchangelog]: http://keepachangelog.com/en/1.0.0/
-[layers-shield]: https://images.microbadger.com/badges/image/hassioaddons/magicmirror.svg
 [license-shield]: https://img.shields.io/github/license/hassio-addons/addon-magicmirror.svg
+[ludeeus]: https://github.com/ludeeus
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2019.svg
-[microbadger]: https://microbadger.com/images/hassioaddons/magicmirror
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
-[pulls-shield]: https://img.shields.io/docker/pulls/hassioaddons/magicmirror.svg
 [reddit]: https://reddit.com/r/homeassistant
 [releases-shield]: https://img.shields.io/github/release/hassio-addons/addon-magicmirror.svg
 [releases]: https://github.com/hassio-addons/addon-magicmirror/releases
