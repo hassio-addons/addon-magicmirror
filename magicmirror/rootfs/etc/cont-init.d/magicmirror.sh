@@ -3,7 +3,6 @@
 # Community Hass.io Add-ons: MagicMirror²
 # Configures MagicMirror²
 # ==============================================================================
-
 readonly ghurl='https://github.com/'
 readonly modules=$(bashio::config 'modules')
 

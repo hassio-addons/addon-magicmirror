@@ -5,7 +5,7 @@
 # ==============================================================================
 
 # Wait for MagicMirror² to become available
-s6-svwait -u -t 5000 /var/run/s6/services/magicmirror
+bashio::net.wait_for 8080
 
 # Disable HA Authentication if front door is open
 if bashio::config.true 'leave_front_door_open'; then
@@ -19,4 +19,4 @@ else
     options='/etc/nginx/nginx.conf'
  fi
 
- exec nginx -c "$options"
+exec nginx -c "$options"

@@ -3,7 +3,6 @@
 # Community Hass.io Add-ons: MagicMirror²
 # Runs MagicMirror²
 # ==============================================================================
-
 bashio::log.info "Starting MagicMirror² server..."
 cd /opt || bashio::exit "Could not change dir."
 exec node serveronly
