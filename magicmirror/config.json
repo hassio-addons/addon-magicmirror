@@ -18,33 +18,29 @@
   "auth_api": true,
   "hassio_role": "default",
   "homeassistant_api": true,
-  "host_network": false,
   "ports": {
     "6556/tcp": 6556
+  },
+  "ports_description": {
+    "6556/tcp": "Magic Mirror frontend"
   },
   "map": [
     "ssl",
     "config:rw"
   ],
   "options": {
-    "log_level": "info",
     "ssl": true,
     "certfile": "fullchain.pem",
     "keyfile": "privkey.pem",
-    "ipv6": false,
     "modules": []
   },
   "schema": {
-    "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)",
+    "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)?",
     "ssl": "bool",
     "certfile": "str",
     "keyfile": "str",
-    "ipv6": "bool",
     "modules": ["str"],
     "i_like_to_be_pwned": "bool?",
     "leave_front_door_open": "bool?"
-  },
-  "environment": {
-    "LOG_FORMAT": "{LEVEL}: {MESSAGE}"
   }
 }

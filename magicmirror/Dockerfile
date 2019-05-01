@@ -1,4 +1,4 @@
-ARG BUILD_FROM=hassioaddons/base:3.0.1
+ARG BUILD_FROM=hassioaddons/base:3.1.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -16,22 +16,48 @@ WORKDIR /opt
 # hadolint ignore=DL3003
 RUN \
   apk add --no-cache \
-    nodejs=10.14.2-r0 \
-    npm=10.14.2-r0 \
-    nginx=1.14.2-r0 \
-    lua-resty-http=0.12-r1 \
-    nginx-mod-http-lua=1.14.2-r0 \
-    git=2.20.1-r0 \
-  && cd /opt \
+      git=2.20.1-r0 \
+      lua-resty-http=0.12-r1 \
+      nginx-mod-http-lua=1.14.2-r0 \
+      nginx=1.14.2-r0 \
+      nodejs=10.14.2-r0 \
+      npm=10.14.2-r0 \
+      paxctl=0.9-r0 \
+  \
+  && paxctl -cm "$(command -v node)" \
+  && npm config set unsafe-perm true \
+  \
+  && npm install -g modclean@3.0.0-beta.1 \
+  \
   && git clone --branch "${MM_VERSION}" --depth=1 \
     https://github.com/MichMich/MagicMirror.git /opt \
-  && npm install --unsafe-perm \
   \
-  && git clone https://github.com/aserramonner/MMM-HASS.git /tmp/MMM_HASS \
-  && cd /tmp/MMM_HASS \
-  && git checkout "${MMM_HASS}" \
-  && mv /tmp/MMM_HASS /opt/modules/MMM-HASS \
-  && npm install --unsafe-perm
+  && npm install \
+    --no-optional \
+    --only=production \
+  \
+  && git clone \
+    https://github.com/aserramonner/MMM-HASS.git /opt/modules/MMM-HASS \
+  \
+  && cd /opt/modules/MMM-HASS \
+  && npm install \
+    --no-optional \
+    --only=production \
+  \
+  && modclean \
+    --path /opt \
+    --no-progress \
+    --keep-empty \
+    --run \
+  \
+  && npm uninstall -g modclean \
+  && npm cache clear --force \
+  \
+  && rm -f -r \
+    /tmp/* \
+    /opt/.git \
+    /opt/modules/MMM-HASS/.git \
+    /root/.electron
 
 # Copy root filesystem
 COPY rootfs /
