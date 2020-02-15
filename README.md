@@ -55,18 +55,14 @@ first time starting the add-on).
 
 Example add-on configuration:
 
-```json
-{
-  "log_level": "info",
-  "ssl": true,
-  "certfile": "fullchain.pem",
-  "keyfile": "privkey.pem",
-  "ipv6": false,
-  "modules":
-    [
-      "mihairinzis/MMM-wiki"
-    ]
-}
+```yaml
+log_level: info
+ssl: true
+certfile: fullchain.pem
+keyfile: privkey.pem
+ipv6: false
+modules:
+  - mihairinzis/MMM-wiki
 ```
 
 **Note**: _This is just an example, don't copy and paste it! Create your own!_
@@ -113,11 +109,9 @@ The modules needs to be hosted in a github repo.
 
 For `https://github.com/mihairinzis/MMM-wiki` you use:
 
-```json
-  "modules":
-    [
-      "mihairinzis/MMM-wiki"
-    ]
+```yaml
+modules:
+  - "mihairinzis/MMM-wiki"
 ```
 
 ### Option: `i_like_to_be_pwned`
