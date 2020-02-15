@@ -18,8 +18,8 @@ RUN \
   apk add --no-cache \
       git=2.24.1-r0 \
       lua-resty-http=0.15-r0 \
-      nginx-mod-http-lua=1.14.2-r0 \
-      nginx=1.14.2-r0 \
+      nginx-mod-http-lua=1.16.1-r6 \
+      nginx=1.16.1-r6 \
       nodejs=10.14.2-r0 \
       npm=10.14.2-r0 \
       paxctl=0.9-r0 \
