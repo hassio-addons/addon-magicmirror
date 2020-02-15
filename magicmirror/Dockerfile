@@ -16,7 +16,7 @@ WORKDIR /opt
 # hadolint ignore=DL3003
 RUN \
   apk add --no-cache \
-      git=2.20.1-r0 \
+      git=2.24.1-r0 \
       lua-resty-http=0.13-r0 \
       nginx-mod-http-lua=1.14.2-r0 \
       nginx=1.14.2-r0 \
