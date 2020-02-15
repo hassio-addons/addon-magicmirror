@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
-# Community Hass.io Add-ons: MagicMirror²
+# Home Assistant Community Add-on: MagicMirror²
 # Runs MagicMirror²
 # ==============================================================================
 bashio::log.info "Starting MagicMirror² server..."

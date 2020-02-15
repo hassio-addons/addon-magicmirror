@@ -1,8 +1,8 @@
 ---
 repository:
-  description: "MagicMirror² - Community Hass.io Add-on for Home Assistant"
+  description: "MagicMirror² - Home Assistant Community Add-ons"
   homepage: https://addons.community
-  topics: magicmirror, morror, hassio-addons, hassio, hass, home-assistant, homeassistant
+  topics: magicmirror, mirror, addon, addons, home-assistant, homeassistant
   private: false
   has_issues: true
   has_projects: false

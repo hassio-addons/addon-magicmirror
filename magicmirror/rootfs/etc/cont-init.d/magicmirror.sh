@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bashio
 # ==============================================================================
-# Community Hass.io Add-ons: MagicMirror²
+# Home Assistant Community Add-on: MagicMirror²
 # Configures MagicMirror²
 # ==============================================================================
 readonly ghurl='https://github.com/'
