@@ -3,7 +3,7 @@ ARG BUILD_FROM=hassioaddons/base:7.0.0
 FROM ${BUILD_FROM}
 
 # Set ENV
-ENV MM_VERSION="v2.6.0" \
+ENV MM_VERSION="v2.10.1" \
     MMM_HASS='7d0063b0bdfffc9b8d4c751fb31dc0ea0f4e39e4'
 
 # Set shell
