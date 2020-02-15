@@ -6,13 +6,7 @@
   "url": "https://github.com/hassio-addons/addon-magicmirror/tree/master/README.md",
   "webui": "[PROTO:ssl]://[HOST]:[PORT:6556]",
   "startup": "services",
-  "arch": [
-    "aarch64",
-    "amd64",
-    "armhf",
-    "armv7",
-    "i386"
-  ],
+  "arch": ["aarch64", "amd64", "armhf", "armv7", "i386"],
   "boot": "auto",
   "hassio_api": true,
   "auth_api": true,
@@ -24,10 +18,7 @@
   "ports_description": {
     "6556/tcp": "Magic Mirror frontend"
   },
-  "map": [
-    "ssl",
-    "config:rw"
-  ],
+  "map": ["ssl", "config:rw"],
   "options": {
     "ssl": true,
     "certfile": "fullchain.pem",
@@ -35,7 +26,7 @@
     "modules": []
   },
   "schema": {
-    "log_level": "match(^(trace|debug|info|notice|warning|error|fatal)$)?",
+    "log_level": "list(trace|debug|info|notice|warning|error|fatal)?",
     "ssl": "bool",
     "certfile": "str",
     "keyfile": "str",
